@@ -8,7 +8,13 @@ fireball_sound = pygame.mixer.Sound('sounds/fireball.wav')
 explosion_sound = pygame.mixer.Sound('sounds/fireball_explosion.wav')
 
 
-def adjust_volume(volume):
+def adjust_volume(volume: float) -> None:
+
+    """
+    volume: float value between 0 and 1 representing the volume of sound effects
+    Sets the volume of all sound effects to the value volume
+    """
+
     jump_sound.set_volume(volume)
     step_sound.set_volume(volume)
     fireball_sound.set_volume(volume)
